@@ -1,0 +1,20 @@
+const notes = [{}, {
+  title: 'My next trip',
+  body: 'I would like to go to Spain',
+}, {
+  title: 'Habits to work on',
+  body: 'Exercise. Eating better',
+}, {
+  title: 'Office Modifications',
+  body: 'Get a new seat',
+}]
+
+const findNote = function(test, noteTitle){
+  let index = test.findIndex(function(test){
+    return test.title.toLowerCase() === noteTitle.toLowerCase()
+  })
+  return test[index]
+}
+
+const test2 = findNote(notes, 'MY NEXT TRIP')
+console.log(test2)
